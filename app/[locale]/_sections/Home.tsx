@@ -11,6 +11,10 @@ import WriteEffect from "@/components/WriteEffect";
 // Images
 import MyImage from "@/images/MyPhoto.png";
 import bgImage from "@/images/bg.jpg";
+// React Icons
+import { FaGithub } from "react-icons/fa6";
+import { FaWhatsapp , FaTelegramPlane } from "react-icons/fa";
+
 
 function Home() {
   const t = useTranslations("Hero");
@@ -79,7 +83,7 @@ function Home() {
             target="_blank"
             href="https://wa.me/963932680992"
           >
-            <i className="bx bxl-whatsapp" />
+            <FaWhatsapp />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.1, y: -5 }}
@@ -88,7 +92,7 @@ function Home() {
             target="_blank"
             href="https://t.me/abdullahasson"
           >
-            <i className="bx bxl-telegram" />
+            <FaTelegramPlane />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.1, y: -5 }}
@@ -97,7 +101,7 @@ function Home() {
             target="_blank"
             href="https://github.com/abdullahasson"
           >
-            <i className="bx bxl-github" />
+            <FaGithub />
           </motion.a>
         </motion.div>
       </motion.div>

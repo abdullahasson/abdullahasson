@@ -2,6 +2,10 @@
 
 // Framer Motion
 import { motion } from "framer-motion";
+// React Icons
+import { RiReactjsFill, RiNextjsLine } from "react-icons/ri";
+import { TbBrandTypescript } from "react-icons/tb";
+
 
 
 interface ExpertiseListProps {
@@ -70,17 +74,45 @@ const ExpertiseList = ({ title }: ExpertiseListProps) => {
                 transition={{ delay: 1, duration: 0.5 }}
                 viewport={{ once: true, amount: 0.5 }}
             >
-                {["react", "redux", "javascript", "html5", "css3"].map((item, index) => (
+                {/* {["Next", "react", "redux", "javascript", "html5", "css3"].map((item, index) => (
                     <motion.div
                         key={index}
                         className="text-center"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        <i className={`bx bxl-${item} text-c2 text-9xl`} />
+                        <SiNextdotjs className="text-c2 text-9xl" />
+
                         <p className="text-3xl">{item}</p>
                     </motion.div>
-                ))}
+                ))} */}
+                <motion.div
+                    className="text-center"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    <RiNextjsLine className="text-c2 text-9xl" />
+
+                    <p className="text-3xl">Next</p>
+                </motion.div>
+                <motion.div
+                    className="text-center"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    <RiReactjsFill className="text-c2 text-9xl" />
+
+                    <p className="text-3xl">React</p>
+                </motion.div>
+                <motion.div 
+                    className="text-center"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    <TbBrandTypescript className="text-c2 text-9xl" />
+
+                    <p className="text-3xl">Typescript</p>
+                </motion.div>
             </motion.div>
 
             <motion.h2
@@ -103,17 +135,13 @@ const ExpertiseList = ({ title }: ExpertiseListProps) => {
                 viewport={{ once: true, amount: 0.5 }}
             >
                 {technologie.map((item, index) => (
-                    <motion.div
+                    <div
+                        key={index}
                         className="px-6 py-7 flex items-center justify-between max-[767px]:flex-col max-[767px]:py-4"
-                        key={item.name}
-                        initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.5, duration: 0.5 }}
-                        viewport={{ once: true, amount: 0.5 }}
                     >
                         <h2 className="text-4xl max-[767px]:mb-2">{item.name}</h2>
                         <div className="flex text-2xl txt p-0">{item.technologies}</div>
-                    </motion.div>
+                    </div>
                 ))}
             </motion.div>
         </>
