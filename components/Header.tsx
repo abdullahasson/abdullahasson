@@ -11,7 +11,7 @@ import Menu from "../public/Menu_icon";
 
 
 
-const Header = ({ locale } : {locale: string}) => {
+const Header = () => {
   const t = useTranslations("Header")
 
   const [openNav , setopenNav] = useState(false)
@@ -30,8 +30,8 @@ const Header = ({ locale } : {locale: string}) => {
     `
 
     return (
-        <header className="max-[768px]:p-8 max-[768px]:justify-between fixed w-full py-6 px-64 bg-[#050505a9] backdrop-blur-[22px] flex justify-between items-center z-[999] -translate-x-2/4 p-5 left-2/4 top-0">
-            <a href="#home" className="logo">
+        <header className="max-[768px]:p-8 max-[768px]:justify-between fixed w-full py-6 px-64 bg-[#050505a9] backdrop-blur-[22px] flex justify-between items-center z-50 -translate-x-2/4 p-5 left-2/4 top-0">
+            <a href="#home" className="logo rotate-180">
               <Logo />
             </a>
 
@@ -48,7 +48,7 @@ const Header = ({ locale } : {locale: string}) => {
               // style={{display : openNav && window.innerWidth <= 768 ? "flex" : null }}
             >
               {
-                ['#home' , '#expertise' , '#projects' , '#contact'].map((link , index) => (
+                ['#home' , '#expertise' , '#projects' , '#testimonials' , '#contact'].map((link , index) => (
                   <a 
                     key={link}
                     onClick={() => {setopenNav(false)}}
@@ -60,10 +60,10 @@ const Header = ({ locale } : {locale: string}) => {
               }
             </nav>
 
-            <ChangeLng locale={locale} />
+            <ChangeLng />
         </header>
     )
 }
 
 
-export default Header
+export default Header;

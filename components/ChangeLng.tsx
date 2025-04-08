@@ -1,38 +1,24 @@
-"use client"; // Mark the component as a Client Component
+"use client";
 
-import { usePathname, useRouter } from "next/navigation";
-import { ChangeEvent } from "react"; // Import ChangeEvent for type safety
+import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
+import { TbWorld } from "react-icons/tb";
+import Link from "next/link";
 
-const ChangeLng = ({ locale }: { locale: string }) => {
+const ChangeLng = () => {
   const pathname = usePathname();
-  const router = useRouter();
+  const lang = useLocale()
 
-  // Define the type for the event parameter
-  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value; // No need to cast as string, it's already a string
-    const path = pathname.split("/").slice(2).join("/"); // Remove the locale part of the path
-    router.push(`/${newLocale}/${path}`);
-  };
+  const changelng = lang == 'en' ? 'ar' : 'en'
 
   return (
-    <select
-      defaultValue={locale}
-      onChange={handleChange}
-      className="px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-700 cursor-pointer"
+    <Link 
+      href={`/${changelng}/${pathname.split("/").slice(2).join("/")}`}
     >
-      <option
-        value="en"
-        className="text-gray-700 bg-white hover:bg-gray-100"
-      >
-        English
-      </option>
-      <option
-        value="ar"
-        className="text-gray-700 bg-white hover:bg-gray-100"
-      >
-        العربية
-      </option>
-    </select>
+      <div className='flex flex-row-reverse items-center justify-center gap-1 text-xl font-semibold'>
+        <TbWorld /> {lang == 'en' ? 'عربي' : 'English'}
+      </div>
+    </Link>
   );
 };
 
