@@ -1,0 +1,68 @@
+{
+    "Header" : {
+        "nav1" : "الرئيسية",
+        "nav2" : "خبرة",
+        "nav3" : "أعمال",
+        "nav4" : "أراء",
+        "nav5" : "تواصل"
+    },
+
+    "Hero" : {
+        "welcome" : "مرحبا, أنا",
+        "name" : "عبدالله حسون",
+        "And" : "و أنا :",
+        "job1" : "مطور واجهة أمامية",
+        "job2" : "مستقل" ,
+        "where and age" : "أعمل في سوريا, وأهتم بإنشاء تجارب رقمية جذابة على الويب."
+    },
+
+    
+    "Expertise" : {
+        "expertiseTitle" : "خبرة",
+        "expertiseText" : "اكتشف ترسانة أدوات وتقنيات الواجهة الأمامية - React و Redux والمزيد. من مكتبات واجهة المستخدم مثل Material UI & Shadcn/UI إلى الرسوم المتحركة المخصصة باستخدام GSAP  ، أقدم تجارب مستخدم مذهلة.",
+        "expertiseListTitle" : "القائمة الكاملة للأدوات والتقنيات التي أستخدمها"
+    },
+
+    "Projects" : {
+        "projectsTitle" : "أعمالي",
+        "projectsText" : "نظرة عامة موجزة على مشاريع تطوير واجهة المستخدم الأمامية المختارة، مع عرض المهارات والقدرات. إذا كنت تريد التحقق من مهاراتي الفعلية في واجهة المستخدم الأمامية، فلنتصل بك",
+        "project1" : {
+            "title" : "HooBank",
+            "des" : "figma => Multi-page website . Techs: React.js, tailwind css, aso, blur-hash",
+            "tech" : "React , css, tailwind, aso, blur-hash , next.js, next-intl, Typescript, styled-components, Sendgrid API, Vercel"
+        },
+        "project2" : {
+            "title" : "HubQuote",
+            "des" : "figma => Multi-page website . Techs: React.js, tailwind css, aso, blur-hash",
+            "tech" :"React , css, tailwind, aso, blur-hash , next.js, next-intl, Typescript, styled-components, Sendgrid API, Vercel"
+        },
+        "project3" : {
+            "title" : "GoZagle",
+            "des" :"figma => Multi-page website . Techs: React.js, tailwind css, aso, blur-hash",
+            "tech" : "React , css, tailwind, aso, blur-hash , next.js, next-intl, Typescript, styled-components, Sendgrid API, Vercel"
+        }
+    },
+    
+    "Testimonials" : {
+        "TestimonialsTitle" : "أراء",
+        "TestimonialsText" : "شاهد ما يقوله زملائي ومديري وعملائي السابقون عن مهاراتي في تطوير الواجهة الأمامية.",
+        "Testimonial1" : {
+            "name" : "فيبي كارد السعودية",
+            "text" : "عمل رائع، اشيد بالمدراء على العمل مع عبدالله حسون لإنجازه للمشاريع بجودة عالية، كما انه يقدم مقترحات من ضمن ميزانية المشروع مما يجعل مشروعك يظهر بجمالية لامتناهية راغبًا في ترك اثر ابداعي لعمله دون النظر لحقيقة تكلفة المشروع. انصح بالتعامل وبشدة معه."
+        },
+        "Testimonial2" : {
+            "name" : "أحمد ال",
+            "text" : "شخص محترم و ممتاز"
+        }
+    },
+
+
+
+    "Contact" : {
+        "contactTitle" : "التواصل",
+        "inputName" : "الاسم الكامل",
+        "inputEmail" : "عنوان البريد الإلكتروني",
+        "inputMessage" : "رسالة",
+        "send" : "ارسال"
+    }
+}
