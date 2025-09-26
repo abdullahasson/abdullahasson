@@ -1,9 +1,10 @@
 {
-    "Header" : {
+    "Dock" : {
         "nav1" : "Home",
         "nav2" : "Expertise",
         "nav3" : "Projects",
-        "nav4" : "Contact"
+        "nav4" : "Testimonials",
+        "nav5" : "Contact"
     },
 
     "Hero" : {

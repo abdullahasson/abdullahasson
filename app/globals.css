@@ -30,6 +30,18 @@ section {
   width: 4px;
 }
 
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.group:hover .group-hover\:rotate-y-5 {
+  transform: rotateY(5deg);
+}
+
 .image-animation {
   top: 0
 }

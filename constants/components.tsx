@@ -1,55 +1,45 @@
 import {
-  Activity,
+  StarIcon,
   Component,
   HomeIcon,
-  Mail,
-  Languages,
   ScrollText,
-  SunMoon,
   Phone
 } from 'lucide-react';
 
 export const dockData = [
   {
-    title: 'Home',
+    title: 'nav1',
     icon: (
       <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />
     ),
     href: '#',
   },
   {
-    title: 'Expertise',
+    title: 'nav2',
     icon: (
       <ScrollText className='h-full w-full text-neutral-600 dark:text-neutral-300' />
     ),
     href: '#expertise',
   },
   {
-    title: 'Projects',
+    title: 'nav3',
     icon: (
       <Component className='h-full w-full text-neutral-600 dark:text-neutral-300' />
     ),
     href: '#projects',
   },
   {
-    title: 'Contact',
+    title: 'nav4',
+    icon: (
+      <StarIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    ),
+    href: '#testimonials',
+  },
+  {
+    title: 'nav5',
     icon: (
       <Phone className='h-full w-full text-neutral-600 dark:text-neutral-300' />
     ),
     href: '#contact',
-  },
-  {
-    title: 'Activity',
-    icon: (
-      <Activity className='h-full w-full text-neutral-600 dark:text-neutral-300' />
-    ),
-    href: '#',
-  },
-  {
-    title: 'Email',
-    icon: (
-      <Mail className='h-full w-full text-neutral-600 dark:text-neutral-300' />
-    ),
-    href: '#',
   }
 ];

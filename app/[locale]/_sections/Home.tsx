@@ -96,13 +96,21 @@ function Home() {
         </motion.div>
       </motion.div>
 
-      <div>
+      <motion.div
+        initial={{
+          scaleZ: 0
+        }}
+
+        animate={{
+          scaleZ: 1.5
+        }}
+      >
         <CreativeImage
           src="/images/assets/personal-small.jpg"
           alt="my-photo"
           className={`${isRtl ? 'mr-auto' : 'ml-auto'} `}
         />
-      </div>
+      </motion.div>
 
       <motion.a
         href="#expertise"

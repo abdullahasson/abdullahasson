@@ -10,6 +10,7 @@ import { routing } from '@/i18n/routing';
 // Components
 import Footer from "@/components/Footer"
 // UI
+// import { Toaster } from "sonner";
 import Hr from "@/components/ui/hr";
 // style
 import "../globals.css";
@@ -31,7 +32,6 @@ const cairo = Cairo({
   subsets: ['arabic']
 })
 
-// Define the valid locales as a type
 type ValidLocale = "en" | "ar";
 
 export default async function RootLayout({
@@ -48,8 +48,6 @@ export default async function RootLayout({
     notFound();
   }
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
@@ -63,12 +61,13 @@ export default async function RootLayout({
         className={`antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
+            {/* <Toaster /> */}
           <>
             {children}
             <Hr />
             <Footer />
-          </>
 
+          </>
         </NextIntlClientProvider>
       </body>
     </html>
