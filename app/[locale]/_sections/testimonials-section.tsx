@@ -2,12 +2,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslations , useLocale } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Title from '@/components/Title';
-import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Quote, Link } from 'lucide-react';
 import testimonial1 from "../../../public/images/testmonials-1.png"
 import testimonial2 from "../../../public/images/testmonials-2.png"
 import Image, { StaticImageData } from 'next/image';
@@ -35,26 +35,26 @@ export default function TestimonialsSection() {
             id: 1,
             text: t("Testimonial1.text"),
             name: t("Testimonial1.name"),
-            position: "Mostaql",
+            position: "mostaql",
             avatar: testimonial1,
             rating: 5,
             preview: "https://mostaql.com/u/Abdullah_Hasson/reviews/8359509"
         },
         {
             id: 2,
-            text: t("Testimonial1.text"),
-            name: t("Testimonial1.name"),
-            position: "Mostaql",
-            avatar: testimonial1,
+            text: t("Testimonial2.text"),
+            name: t("Testimonial2.name"),
+            position: "mostaql",
+            avatar: testimonial2,
             rating: 5,
             preview: "https://mostaql.com/u/Abdullah_Hasson/reviews/8359509"
         },
         {
             id: 3,
-            text: t("Testimonial1.text"),
-            name: t("Testimonial1.name"),
-            position: "Mostaql",
-            avatar: testimonial2,
+            text: t("Testimonial3.text"),
+            name: t("Testimonial3.name"),
+            position: "nafezly",
+            avatar: testimonial1,
             rating: 5,
             preview: "https://mostaql.com/u/Abdullah_Hasson/reviews/8359509"
         }
@@ -111,7 +111,7 @@ export default function TestimonialsSection() {
     }
 
     return (
-        <section id='testimonials'>
+        <section className='min-h-[100vh] pt-16 px-64 pb-[5rem] max-[560px]:px-10 max-[767px]:px-10' id='testimonials'>
             <Title title={t('TestimonialsTitle')} secondaryTitle={t('TestimonialsText')} />
             <div className="mx-auto text-center" dir="ltr">
                 <div
@@ -151,7 +151,13 @@ export default function TestimonialsSection() {
 
                                         <CardContent className="p-6 h-full flex flex-col justify-between">
                                             <div>
-                                                <Quote className="w-8 h-9 text-c2 mb-4" />
+                                                <div className='flex items-center justify-between mb-4'>
+                                                    <Quote className="w-8 h-9 text-c2" />
+
+                                                    <a href={testimonial.preview} className='z-20'>
+                                                        <Link className="w-8 h-9 text-c2" />
+                                                    </a>
+                                                </div>
                                                 <p className={`text-slate-200 ${isRTL ? 'text-right' : 'text-left'} mb-6 line-clamp-5`}>
                                                     {testimonial.text}
                                                 </p>

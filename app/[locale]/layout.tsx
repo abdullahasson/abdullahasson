@@ -10,11 +10,10 @@ import { routing } from '@/i18n/routing';
 // Components
 import Footer from "@/components/Footer"
 // UI
-// import { Toaster } from "sonner";
+import { Toaster } from "sonner";
 import Hr from "@/components/ui/hr";
 // style
 import "../globals.css";
-
 
 
 export const metadata: Metadata = {
@@ -61,13 +60,15 @@ export default async function RootLayout({
         className={`antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-            {/* <Toaster /> */}
-          <>
-            {children}
-            <Hr />
-            <Footer />
 
-          </>
+
+            <Toaster />
+            <>
+              {children}
+              <Hr />
+              <Footer />
+            </>
+
         </NextIntlClientProvider>
       </body>
     </html>

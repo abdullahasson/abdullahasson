@@ -6,7 +6,6 @@
         "nav4" : "Testimonials",
         "nav5" : "Contact"
     },
-
     "Hero" : {
         "welcome" : "Hello, It`s Me",
         "name" : "Abdullah Hasson", 
@@ -16,14 +15,11 @@
         "job3" : "Front End Developer",
         "where and age" : "Based in Hama, Syria, I'm passionate about creating engaging, digital experiences on the web."
     },
-
-
     "Expertise" : {
         "expertiseTitle" : "Expertise",
         "expertiseText" : "Discover my arsenal of frontend tools & technologies — React, Redux . From UI libraries like Material UI & shadcn/ui to custom animations using GSAP, I deliver stunning user experiences.",
         "expertiseListTitle": "Full list of tools and technologies I use"
     },
-
     "Projects" : {
         "projectsTitle" : "Projects",
         "projectsText" : "A concise overview of selected frontend development projects, showcasing skills and capabilities. If you want to check my actual frontend skills, let`s get a call",
@@ -43,7 +39,6 @@
             "tech" : "React , css, tailwind, aso, blur-hash , next.js, next-intl, Typescript, styled-components, Sendgrid API, Vercel"
         }
     },
-
     "Testimonials" : {
         "TestimonialsTitle" : "Testimonials",
         "TestimonialsText" : "See what my past colleagues, managers and clients have to say about my frontend development skills.",
@@ -52,11 +47,14 @@
             "text" : "Excellent work. I commend the managers for working with Abdullah Hassoun for delivering high-quality projects. He also makes suggestions within the project budget, making your project appear infinitely beautiful. He strives to leave a creative impact with his work regardless of the actual cost. I highly recommend working with him."
         },
         "Testimonial2" : {
-            "name" : "Ahmed al",
+            "name" : "Ahmed al sayid",
             "text" : "A respectable and excellent person"
+        },
+        "Testimonial3" : {
+            "name" : "Naif Alotaibi",
+            "text" : "."
         }
     },
-
     "Contact" : {
         "contactTitle" : "Contact",
         "inputName" : "Full Name",

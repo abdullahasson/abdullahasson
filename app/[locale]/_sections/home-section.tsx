@@ -7,10 +7,13 @@ import * as motion from "motion/react-client"
 // Components
 import WriteEffect from "@/components/WriteEffect";
 import { CreativeImage } from "@/components/CreativeImage";
+// UI
+import { Magnetic } from "@/components/ui/magnetic"
 // Images
 import bgImage from "@/images/bg.jpg";
 // React Icons
 import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
+import { ChevronsDown } from "lucide-react"
 
 
 function Home() {
@@ -20,7 +23,7 @@ function Home() {
 
   return (
     <section
-      className="flex justify-between items-center max-[768px]:flex-col relative min-[767px]:px-64"
+      className="flex justify-between items-center max-[768px]:flex-col relative min-[767px]:px-64 min-h-[100vh] pt-[10rem] px-64 pb-[5rem] max-[560px]:px-10 max-[767px]:px-10"
       id="home"
     >
       <motion.div
@@ -69,60 +72,59 @@ function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="txt text-start p-0 w-[57%] text-4xl leading-snug max-[767px]:text-center max-[767px]:w-11/12 max-[767px]:mx-auto"
+          className="txt text-start p-0 w-[57%] text-4xl leading-snug max-[767px]:text-center mb-10 max-[767px]:w-11/12 max-[767px]:mx-auto"
         >
           {t("where and age")}
         </motion.p>
 
-        <motion.div>
-          <motion.a
-            whileHover={{ scale: 1.1, y: -5 }}
-            whileTap={{ scale: 0.9 }}
-            className="inline-flex cursor-pointer justify-center items-center w-16 h-16 bg-transparent border-c2 text-[2rem] text-c2 ml-0 mr-6 my-12 rounded-[50%] border-[0.2rem] border-solid hover:bg-c2 hover:text-c1"
-            target="_blank"
-            href="https://wa.me/963935101347"
-          >
-            <FaWhatsapp />
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: 1.1, y: -5 }}
-            whileTap={{ scale: 0.9 }}
-            className="inline-flex cursor-pointer justify-center items-center w-16 h-16 bg-transparent border-c2 text-[2rem] text-c2 ml-0 mr-6 my-12 rounded-[50%] border-[0.2rem] border-solid hover:bg-c2 hover:text-c1"
-            target="_blank"
-            href="https://t.me/abdullahasson"
-          >
-            <FaTelegramPlane />
-          </motion.a>
-        </motion.div>
+        <ContactButton />
       </motion.div>
 
-      <motion.div
-        initial={{
-          scaleZ: 0
-        }}
-
-        animate={{
-          scaleZ: 1.5
-        }}
-      >
-        <CreativeImage
-          src="/images/assets/personal-small.jpg"
-          alt="my-photo"
-          className={`${isRtl ? 'mr-auto' : 'ml-auto'} `}
-        />
-      </motion.div>
+      <CreativeImage
+        src="/images/assets/personal-small.jpg"
+        alt="my-photo"
+        className={`${isRtl ? 'mr-auto' : 'ml-auto'} `}
+      />
 
       <motion.a
         href="#expertise"
-        className="absolute left-1/2 bottom-7 -translate-x-1/2 text-[4rem] text-c2 max-[560px]:bottom-0"
+        className="absolute left-1/2 bottom-10 -translate-x-1/2 text-[4rem] text-c2 max-[560px]:bottom-0"
         initial={{ y: 0 }}
         animate={{ y: [0, -10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
       >
-        <i className="bx bx-chevrons-down" />
+        <ChevronsDown />
       </motion.a>
     </section>
   );
 }
+
+
+// Components
+export const ContactButton = () => (
+  <motion.div
+    className="flex gap-10 items-center"
+  >
+    <Magnetic>
+      <a
+        className="inline-flex cursor-pointer justify-center items-center w-16 h-16 bg-transparent border-c2 text-[2rem] text-c2 rounded-[50%] border-[0.2rem] border-solid hover:bg-c2 hover:text-c1"
+        target="_blank"
+        href="https://wa.me/963935101347"
+      >
+        <FaWhatsapp />
+      </a>
+    </Magnetic>
+    <Magnetic>
+      <a
+        className="inline-flex cursor-pointer justify-center items-center w-16 h-16 bg-transparent border-c2 text-[2rem] text-c2 rounded-[50%] border-[0.2rem] border-solid hover:bg-c2 hover:text-c1"
+        target="_blank"
+        href="https://t.me/abdullahasson"
+      >
+        <FaTelegramPlane />
+      </a>
+    </Magnetic>
+  </motion.div>
+)
+
 
 export default Home;

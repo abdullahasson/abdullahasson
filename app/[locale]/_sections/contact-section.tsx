@@ -1,13 +1,19 @@
 // components/Contact.tsx (fixed version)
 "use client"
 
+// React
 import { useEffect, useState } from 'react';
+// Next Intl
 import { useTranslations } from 'next-intl';
-import Title from '@/components/Title';
-import { useForm } from 'react-hook-form';
-import { toast } from "sonner"
+// Email & Form
 import { send, init } from '@emailjs/browser';
-import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
+import { useForm } from 'react-hook-form';
+// Components
+import Title from '@/components/Title';
+import { ContactButton } from "./home-section"
+// UI
+import { toast } from "sonner"
+import { Magnetic } from "@/components/ui/magnetic"
 
 function Contact() {
     const t = useTranslations("Contact")
@@ -25,7 +31,7 @@ function Contact() {
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 toast("Message sent successfully");
-                reset(); 
+                reset();
             })
             .catch((err) => {
                 console.error('FAILED...', err);
@@ -35,7 +41,7 @@ function Contact() {
     // Prevent hydration mismatch by not rendering form until client-side
     if (!isClient) {
         return (
-            <section className="contact flex flex-col justify-center items-center pt-16" id="contact">
+            <section className="contact flex flex-col justify-center items-center pt-16 min-h-[100vh]" id="contact">
                 <Title title={t('contactTitle')} secondaryTitle="" />
                 <div className='flex flex-col justify-between items-center gap-10 px-6 mt-2 rounded-xl'>
                     <div>Loading contact form...</div>
@@ -45,7 +51,7 @@ function Contact() {
     }
 
     return (
-        <section className="contact flex flex-col justify-center items-center pt-16" id="contact">
+        <section className="contact flex flex-col justify-center items-center pt-16 px-64 pb-[5rem] max-[560px]:px-10 max-[767px]:px-10" id="contact">
             <Title title={t('contactTitle')} secondaryTitle="" />
 
             <div className='flex flex-col justify-between items-center gap-10 px-6 mt-2 rounded-xl'>
@@ -83,19 +89,22 @@ function Contact() {
                     />
                     {errors.message && <span className="text-red-500 text-sm">This field is required</span>}
 
-                    <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full p-4 rounded-md bg-c2 font-extrabold text-3xl cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                        {isSubmitting ? t("sending") : t("send")}
-                    </button>
+                    <Magnetic>
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="w-full p-4 rounded-md bg-c2 font-extrabold text-3xl cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            <Magnetic>
+                                <p>
+                                    {isSubmitting ? t("sending") : t("send")}
+                                </p>
+                            </Magnetic>
+                        </button>
+                    </Magnetic>
                 </form>
 
-                <div className='max-[560px]:mt-10'>
-                    <a className="inline-flex cursor-pointer justify-center items-center w-16 h-16 bg-transparent border-c2 text-[2rem] text-c2 ml-0 mr-6 rounded-[50%] border-[0.2rem] border-solid hover:bg-c2 hover:text-c1" target="_blank" href="https://t.me/abdullahasson"><FaTelegramPlane /></a>
-                    <a className="inline-flex cursor-pointer justify-center items-center w-16 h-16 bg-transparent border-c2 text-[2rem] text-c2 ml-0 mr-6 rounded-[50%] border-[0.2rem] border-solid hover:bg-c2 hover:text-c1" target="_blank" href="https://wa.me/963932680992"><FaWhatsapp /></a>
-                </div>
+                <ContactButton />
             </div>
         </section>
     )

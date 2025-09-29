@@ -88,9 +88,6 @@ const config: Config = {
 				body: {
 					'@apply bg-[#050505] text-[var(--text-color)]': {},
 				},
-				section: {
-					'@apply min-h-[100vh] pt-[10rem] px-64 pb-[5rem] max-[560px]:px-10 max-[767px]:px-10': {},
-				},
 				hr: {
 					'@apply w-[60%] ml-auto mr-auto my-0 bg-[#242424] border-none h-[2px]': {},
 				},

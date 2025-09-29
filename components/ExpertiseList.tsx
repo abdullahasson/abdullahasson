@@ -66,7 +66,7 @@ const ExpertiseList = ({ title }: ExpertiseListProps) => {
             {/* Icons Section */}
             <motion.div
                 dir="ltr"
-                className="flex justify-between items-center pt-14 gap-12 max-[767px]:px-10"
+                className="flex justify-between items-center pt-12 gap-12 max-[767px]:px-10"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.5 }}
@@ -102,7 +102,7 @@ const ExpertiseList = ({ title }: ExpertiseListProps) => {
 
                     <p className="text-3xl">React</p>
                 </motion.div>
-                <motion.div 
+                <motion.div
                     className="text-center"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -113,8 +113,10 @@ const ExpertiseList = ({ title }: ExpertiseListProps) => {
                 </motion.div>
             </motion.div>
 
+
+            {/* Expertise List */}
             <motion.h2
-                className="font-bold text-5xl pt-16 max-[560px]:text-center max-[560px]:text-3xl"
+                className="font-bold text-5xl pt-12 max-[560px]:text-center max-[560px]:text-3xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.5 }}
@@ -123,14 +125,25 @@ const ExpertiseList = ({ title }: ExpertiseListProps) => {
                 {title}
             </motion.h2>
 
-            {/* Expertise List */}
             <motion.div
                 dir="ltr"
-                className="border-2 border-c3 border-solid divide-y-[0.5px] rounded-xl divide-solid flex flex-col mt-16 max-[767px]:mt-10 w-11/12 max-[767px]:w-full"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.4, duration: 0.5 }}
-                viewport={{ once: true, amount: 0.5 }}
+                className="border-2 border-c3 border-solid shadow-xl divide-y-[0.5px] rounded-xl divide-solid flex flex-col mt-16 max-[767px]:mt-10 w-11/12 max-[767px]:w-full"
+                initial={{
+                    opacity: 0,
+                    y: 20,
+                }}
+
+                whileInView={{
+                    opacity: 1,
+                    y: 0,
+                }}
+
+                transition={{
+                    delay: 1.4,
+                    duration: 0.5
+                }}
+
+                viewport={{ once: true }}
             >
                 {technologie.map((item, index) => (
                     <div

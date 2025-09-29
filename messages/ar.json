@@ -6,7 +6,6 @@
         "nav4" : "أراء",
         "nav5" : "تواصل"
     },
-
     "Hero" : {
         "welcome" : "مرحبا, أنا",
         "name" : "عبدالله حسون",
@@ -15,13 +14,11 @@
         "job2" : "مستقل" ,
         "where and age" : "أعمل في سوريا, وأهتم بإنشاء تجارب رقمية جذابة على الويب."
     },
-
     "Expertise" : {
         "expertiseTitle" : "خبرة",
         "expertiseText" : "اكتشف ترسانة أدوات وتقنيات الواجهة الأمامية - React و Redux والمزيد. من مكتبات واجهة المستخدم مثل Material UI & Shadcn/UI إلى الرسوم المتحركة المخصصة باستخدام GSAP  ، أقدم تجارب مستخدم مذهلة.",
         "expertiseListTitle" : "القائمة الكاملة للأدوات والتقنيات التي أستخدمها"
     },
-
     "Projects" : {
         "projectsTitle" : "أعمالي",
         "projectsText" : "نظرة عامة موجزة على مشاريع تطوير واجهة المستخدم الأمامية المختارة، مع عرض المهارات والقدرات. إذا كنت تريد التحقق من مهاراتي الفعلية في واجهة المستخدم الأمامية، فلنتصل بك",
@@ -41,7 +38,6 @@
             "tech" : "React , css, tailwind, aso, blur-hash , next.js, next-intl, Typescript, styled-components, Sendgrid API, Vercel"
         }
     },
-    
     "Testimonials" : {
         "TestimonialsTitle" : "أراء",
         "TestimonialsText" : "شاهد ما يقوله زملائي ومديري وعملائي السابقون عن مهاراتي في تطوير الواجهة الأمامية.",
@@ -52,9 +48,12 @@
         "Testimonial2" : {
             "name" : "أحمد السيد",
             "text" : "شخص محترم و ممتاز"
+        },
+        "Testimonial3" : {
+            "name" : "Naif Alotaibi",
+            "text" : "."
         }
     },
-
     "Contact" : {
         "contactTitle" : "التواصل",
         "inputName" : "الاسم الكامل",
