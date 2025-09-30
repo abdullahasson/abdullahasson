@@ -10,6 +10,7 @@ import Title from '@/components/Title';
 import { ChevronLeft, ChevronRight, Star, Quote, Link } from 'lucide-react';
 import testimonial1 from "../../../public/images/testmonials-1.png"
 import testimonial2 from "../../../public/images/testmonials-2.png"
+import testimonial3 from "../../../public/images/testmonials-3.png"
 import Image, { StaticImageData } from 'next/image';
 
 interface Testimonial {
@@ -54,7 +55,7 @@ export default function TestimonialsSection() {
             text: t("Testimonial3.text"),
             name: t("Testimonial3.name"),
             position: "nafezly",
-            avatar: testimonial1,
+            avatar: testimonial3,
             rating: 5,
             preview: "https://mostaql.com/u/Abdullah_Hasson/reviews/8359509"
         }
