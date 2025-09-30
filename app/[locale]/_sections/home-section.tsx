@@ -5,10 +5,11 @@ import { useTranslations, useLocale } from "next-intl";
 // Animation
 import * as motion from "motion/react-client"
 // Components
-import WriteEffect from "@/components/WriteEffect";
+// import WriteEffect from "@/components/WriteEffect";
 import { CreativeImage } from "@/components/CreativeImage";
 // UI
 import { Magnetic } from "@/components/ui/magnetic"
+import { TextLoop } from "@/components/ui/text-loop";
 // Images
 import bgImage from "@/images/bg.jpg";
 // React Icons
@@ -65,7 +66,42 @@ function Home() {
           transition={{ delay: 0.6, duration: 0.5 }}
           className="mb-8 text-[3.2rem] font-bold max-[500px]:text-[2rem] max-[560px]:mb-4"
         >
-          {t("And")} <WriteEffect />
+          {t("And")}       <TextLoop
+            className='overflow-y-clip'
+            transition={{
+              type: 'spring',
+              stiffness: 900,
+              damping: 80,
+              mass: 10,
+            }}
+            variants={{
+              initial: {
+                y: 20,
+                rotateX: 90,
+                opacity: 0,
+                filter: 'blur(4px)',
+              },
+              animate: {
+                y: 0,
+                rotateX: 0,
+                opacity: 1,
+                filter: 'blur(0px)',
+              },
+              exit: {
+                y: -20,
+                rotateX: -90,
+                opacity: 0,
+                filter: 'blur(4px)',
+              },
+            }}
+          >
+            <span>
+              {t('job1')}
+            </span>
+            <span>
+              {t('job2')}
+            </span>
+          </TextLoop>
         </motion.h3>
 
         <motion.p

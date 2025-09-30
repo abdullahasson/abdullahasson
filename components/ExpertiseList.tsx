@@ -1,65 +1,13 @@
 // Framer Motion
 import * as motion from "motion/react-client"
-// React Icons
-import { RiReactjsFill, RiNextjsLine } from "react-icons/ri";
-import { TbBrandTypescript } from "react-icons/tb";
-
-
+// Constants
+import { technologie, techIcon } from "../constants/components"
 
 interface ExpertiseListProps {
     title: string;
 }
 
 const ExpertiseList = ({ title }: ExpertiseListProps) => {
-
-
-    const technologie = [
-        {
-            name: "Core Frontend Tools",
-            technologies: "Next / React / Javascript / HTML / CSS",
-        },
-        {
-            name: "State Managers",
-            technologies: "Redux / Context API",
-        },
-        {
-            name: "React Ecosystem Libraries",
-            technologies: "Axios / React Hook Form & Zod / React Router / Tanstack Router / Tanstack Query",
-        },
-        {
-            name: "CSS",
-            technologies: "Tailwind / SASS / Emotion/Styled Components / CSS Modules",
-        },
-        {
-            name: "UI",
-            technologies: "Material UI / shadcn/ui / Bootstrap",
-        },
-        {
-            name: "Animations",
-            technologies: "GSAP / AOS",
-        },
-        {
-            name: "Bundling Tools",
-            technologies: "Vite",
-        },
-        {
-            name: "Code Quality",
-            technologies: "ESLint / Prettier / BEM / Chrome Developer Tools / React Profiler / Git / Core Web Vitals",
-        },
-        {
-            name: "Unit Testing",
-            technologies: "Jest / React Testing Library",
-        },
-        {
-            name: "Performance Analysis Tool",
-            technologies: "GTmetrix | Lighthouse",
-        },
-        {
-            name: "Code Editor",
-            technologies: "Visual Studio Code",
-        },
-    ];
-
 
     return (
         <>
@@ -72,45 +20,22 @@ const ExpertiseList = ({ title }: ExpertiseListProps) => {
                 transition={{ delay: 1, duration: 0.5 }}
                 viewport={{ once: true, amount: 0.5 }}
             >
-                {/* {["Next", "react", "redux", "javascript", "html5", "css3"].map((item, index) => (
-                    <motion.div
-                        key={index}
-                        className="text-center"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                    >
-                        <SiNextdotjs className="text-c2 text-9xl" />
+                {
+                    techIcon.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            className="text-center"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            {item.icon}
 
-                        <p className="text-3xl">{item}</p>
-                    </motion.div>
-                ))} */}
-                <motion.div
-                    className="text-center"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <RiNextjsLine className="text-c2 text-9xl" />
-
-                    <p className="text-3xl">Next</p>
-                </motion.div>
-                <motion.div
-                    className="text-center"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <RiReactjsFill className="text-c2 text-9xl" />
-
-                    <p className="text-3xl">React</p>
-                </motion.div>
-                <motion.div
-                    className="text-center"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <TbBrandTypescript className="text-c2 text-9xl" />
-
-                    <p className="text-3xl">Typescript</p>
-                </motion.div>
+                            <p className="text-3xl">
+                                {item.name}
+                            </p>
+                        </motion.div>
+                    ))
+                }
             </motion.div>
 
 
