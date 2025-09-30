@@ -28,7 +28,9 @@ const ExpertiseList = ({ title }: ExpertiseListProps) => {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >
-                            {item.icon}
+                            <span className="text-9xl">
+                                {item.icon}
+                            </span>
 
                             <p className="text-3xl">
                                 {item.name}

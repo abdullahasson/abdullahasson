@@ -101,18 +101,18 @@ export const technologie = [
 export const techIcon = [
   {
     name: 'Next',
-    icon: <RiNextjsLine className="text-c2 text-9xl" />
+    icon: <RiNextjsLine  />
   },
   {
     name: 'React',
-    icon: <RiReactjsFill className="text-c2 text-9xl" />
+    icon: <RiReactjsFill  />
   },
   {
     name: 'Typescript',
-    icon: <TbBrandTypescript className="text-c2 text-9xl" />
+    icon: <TbBrandTypescript  />
   },
   {
     name: 'Javascript',
-    icon: <TbBrandJavascript className="text-c2 text-9xl" />
+    icon: <TbBrandJavascript  />
   },
 ]
